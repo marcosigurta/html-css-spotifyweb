@@ -12,7 +12,7 @@
 h2,
 h3 {
   color: #fff;
-  font-size: bold;
+  font-weight: bold;
 }
 
 .white-text {
@@ -36,7 +36,7 @@ a {
 #main-wrap {
   width: 100%;
   height: calc(100vh - 60px);
-  background-color: #141922;
+  background-image: linear-gradient(#141922, #141905);
   display: flex;
 }
 
@@ -64,16 +64,8 @@ a {
 
 #left-content ul li {
   padding: 7px 0;
+  position: relative;
 }
-
-/* .marker {
-  position: absolute;
-  background-color: #adff2f;
-  width: 4px;
-  vertical-align: middle;
-  height: 40px;
-  display: none;
-} */
 
 #left-content a {
   color: #b3b3b3;
@@ -134,6 +126,7 @@ a {
 
 #right-content #right-navFixed {
   position: fixed;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -188,6 +181,25 @@ a {
   color: #fff;
 }
 
+.list-underline {
+  position: relative;
+}
+
+.link-underline {
+  position: absolute;
+  width: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+#right-content #right-content-navigation ul .list-underline:hover .link-underline {
+  width: 100%;
+}
+
 #right-content section .section-title {
   margin-bottom: 20px;
 }
@@ -203,24 +215,64 @@ a {
   margin-top: 10px;
 }
 
-#right-content #recently-played {
+#right-content .thumbnail-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
 
-#right-content #recently-played .thumbnail-card {
+#right-content .thumbnail-wrapper .thumbnail-card {
   text-align: center;
   margin-right: 20px;
   flex-basis: calc((100% / 6) - 20px);
   margin-bottom: 20px;
 }
-
-#right-content #recently-played .thumbnail-card img {
-  width: 100%;
-  margin-bottom: 10px;
+#right-content .thumbnail-wrapper .thumbnail-card .thumbnail-img {
+  position: relative;
 }
 
-#right-content #recently-played .rounded-img {
+#right-content section .layover {
+  background-color: #00000091;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+
+#right-content section .layover .layover-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: #fff;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+ #right-content .thumbnail-wrapper .thumbnail-card:hover .layover {
+  width: 100%;
+  z-index: 20;
+} 
+
+#right-content .thumbnail-wrapper .thumbnail-card:hover .layover-icon {
+  opacity: 1;
+}
+
+
+#right-content .thumbnail-wrapper .thumbnail-card img {
+  width: 100%;
+}
+
+#right-content .thumbnail-wrapper .thumbnail-card:hover .filter{
+  height: 80%;;
+}
+
+
+#right-content .thumbnail-wrapper .rounded-img {
+  border-radius: 50%;
+}
+
+.rounded-layover {
   border-radius: 50%;
 }
 
@@ -275,13 +327,21 @@ footer #media-player #media-controller #media-bar {
 }
 
 @media (max-width: 996px) {
-  #right-content #recently-played .thumbnail-card {
+
+  #right-content .thumbnail-wrapper .thumbnail-card {
     text-align: center;
     margin-right: 10px;
     flex-basis: calc((100% / 4) - 10px);
   }
+
+  #right-content .thumbnail-wrapper .thumbnail-card:hover .layover-icon {
+    opacity: 1;
+    font-size: 0.5em;
 }
+}
+
 @media (max-width: 576px) {
+
   #left-content {
     width: 50px;
     align-items: center;
@@ -323,11 +383,17 @@ footer #media-player #media-controller #media-bar {
     width: calc(100% - 50px);
   }
 
-  #right-content #recently-played .thumbnail-card {
+  #right-content .thumbnail-wrapper .thumbnail-card {
     text-align: center;
     margin-right: 10px;
     flex-basis: calc((100% / 2) - 10px);
   }
+
+  #right-content .thumbnail-wrapper .thumbnail-card:hover .layover-icon {
+    opacity: 1;
+    font-size: 0.5em;
+  }
+
 }
 
 /* Scrollbar customization */

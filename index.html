@@ -50,7 +50,7 @@
                 <ul>
                     <li>
                         <a href="">
-                           
+
                             <img src="img/home.svg" alt="" />
                             <span class="white-text">Home</span>
                             <span class="marker"></span>
@@ -349,7 +349,7 @@
         </div>
     </main>
 
-<!-- Footer -->
+    <!-- Footer -->
 
     <footer>
         <div id="media-player">
@@ -358,8 +358,8 @@
                     <img src="img/metal_lifting.jpg" alt="">
                 </div>
                 <div>
-                    <h2 class="white-text">Metallica</h2>
-                    <p>Master Of Puppets</p>
+                    <span class="white-text">Pantera</span>
+                    <p>I'm Broken</p>
                 </div>
                 <div>
                     <a href=""><i class="far fa-heart"></i></a>
@@ -367,7 +367,7 @@
                 </div>
             </div>
             <div id="media-controller">
-                <div>
+                <div id="media-controls">
                     <i class="fas fa-random"></i>
                     <i class="fas fa-step-backward"></i>
                     <i class="far fa-play-circle"></i>
@@ -375,15 +375,31 @@
                     <i class="fas fa-redo-alt"></i>
                 </div>
                 <div id="media-bar">
+                    <span class="white-text">0:45</span>
+                    <span id="media-player-bar">
+                        <span id="bar-active">
+                            <span id="round-marker"></span>
+                        </span>
+                    </span>
 
+                    <span class="white-text">4:35</span>
                 </div>
             </div>
             <div id="media-settings">
-                <i class="fas fa-list"></i>
-                <i class="fas fa-desktop"></i>
-                <i class="fas fa-volume-up"></i>
+                <div id="media-toolkit">
+                    <i class="fas fa-list"></i>
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <div id="volume-settings">
+                    <i class="fas fa-volume-up"></i>
+                    <div id="media-volume-bar">
+                        <div id="volume-active">
+                            <div id="volume-marker"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
     </footer>
 </body>
 

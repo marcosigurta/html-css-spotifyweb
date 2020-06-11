@@ -24,6 +24,14 @@ a {
   color: #b3b3b3;
 }
 
+.visible-marker {
+  width: 5px!important;
+}
+
+.visible-underline {
+  width: 100%!important;
+}
+
 /* List item e Anchor tag */
 
 li,
@@ -333,13 +341,14 @@ footer {
   height: 60px;
   background-color: #282828;
   padding: 0 2%;
+  overflow: hidden;
 }
 
 footer i {
   transition: 0.3s ease-in-out;
   cursor: pointer;
   color: #b3b3b3;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 footer i:hover {
@@ -401,7 +410,6 @@ footer #media-player #media-controller #media-controls {
 footer #media-player #media-controller i {
   margin-right: 10px;
   margin-bottom: 5px;
-  font-size: 0.8em;
 }
 
 footer #media-player #media-controller i:nth-of-type(5) {
@@ -409,7 +417,7 @@ footer #media-player #media-controller i:nth-of-type(5) {
 }
 
 footer #media-player #media-controller i:nth-of-type(3) {
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 footer #media-player #media-controller #media-bar {
@@ -425,7 +433,7 @@ footer #media-player #media-controller #media-bar span {
 
 footer #media-player #media-controller #media-bar #media-player-bar {
   width: 70%;
-  height: 2px;
+  height: 4px;
   background-color: #b3b3b3;
   border-radius: 10px;
   margin: 0 2%;
@@ -438,7 +446,7 @@ footer
   #media-player-bar
   #bar-active {
   width: 30%;
-  height: 2px;
+  height: 4px;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -480,7 +488,7 @@ footer #media-player #media-settings #media-toolkit,
 
 footer #media-player #media-settings #media-volume-bar {
   width: 70px;
-  height: 2px;
+  height: 4px;
   background-color: #b3b3b3;
   margin-left: 5px;
   display: flex;
@@ -488,8 +496,8 @@ footer #media-player #media-settings #media-volume-bar {
 }
 
 footer #media-player #media-settings #media-volume-bar #volume-active {
-  width: 20px;
-  height: 2px;
+  width: 30px;
+  height: 4px;
   background-color: #fff;
   display: flex;
   justify-content: flex-end;
